@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>データが画面を渡っている事を確認しよう</title>
+<link rel="stylesheet" th:href="@{css/reset.css}" type="text/css">
+<link rel="stylesheet" th:href="@{css/sample001.css}" type="text/css">
+</head>
+<body>
+	<nav class="nav-container nav-color">
+		<p>SpringBootSample001(画面間でのデータの移動)</p>
+	</nav>
+	<div class="content-container">
+		<div class="content-wrap">
+			<form class="form-wrap" th:action="@{/to}" th:object="${DisplayDataForm}" method="GET">
+				<div class="space-padding text-center">
+					<span class="content-text">以下の項目に入力したデータが<br>画面を渡って移動している事を確認しよう。</span>
+					
+				</div>
+				<div class="space-padding">
+					<input type="text" name="inputData" class="text-form"/>
+				</div>
+				<div class="space-padding">
+					<input type="submit" class="button-form" value="次の画面に"/>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
